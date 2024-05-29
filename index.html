@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>My Personal Website</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header-container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#home">
+            <h1><span>Mar</span>ia <span>Li</span>za</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li class="nav-item active">
+            <li><a href="#home" data-after="Home">Home</a></li>
+            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#gallery" data-after="Gallery">Gallery</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Home Section  -->
+  <section id="home">
+    <div class="home-container">
+      <div>
+        <div>
+          
+        <h1> <img src="home.jpg.jpg" class="photos1"></h1> 
+        <h1>Hello,</h1>
+        <h1>I'm Maria Liza T. Patangan</h1>
+        <h1>BSCS Student of JRMSU Katipunan Campus<span></span><h1>
+        <h1>Welcome to my Personal Website<span></span><h1>
+         
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- End Home Section  -->
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="about.jpg.jpg" alt="img">
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title">About <span></span></h1>
+        <h2 class="section-title"><span>Personal Information</span></h2>
+        <p>I'm Maria Liza T. Patangan 21 years old, and I was born on August 9, 2002. I came from Manukan Zamboanga del Norte.</p>
+        <h2 class="section-title"><span>Educational Background</span></h2>
+        <p>Primary Education: Serongan Elementrary School</p>
+        <p>Secondary Education: Manukan National High school</p>
+        <p>Tertiary Education: Jose Rizal Memorial State University Katipunan Campus</p>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <div class="gallery container">
+  <div class="gallery-header">
+    <h1 class="section-title"><span>Photos</span></h1>
+  </div>
+  <div class="all-gallery">
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <div class="gallery-info">
+          <div class="images"><img src="college photos1.jpg.jpg"></div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-info">
+          <div class="images"><img src="collegephotos2.jpg.jpg"></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-info">
+            <div class="images"><img src="collegephotos3.jpg"></div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-info">
+              <div class="images"><img src="collegephotos4.jpg.jpeg"></div>
+              </div>
+            </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Gallery Section -->
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact container">
+      <div>
+        <h1 class="section-title">Contact <span></span></h1>
+      </div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon"><img src="phone-call.png" /></div>
+          <div class="contact-info"
+            <h1>Phone</h1>
+            <h2>+63951938801</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="email.png.png" /></div>
+          <div class="contact-info">
+            <p><a href="https://www.gmail.com/"><p>marializapatangan@gmail.com</p></a></div>
+            
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="fb.png" /></div>
+          <div class="contact-info">
+            <p><a href="https://www.facebook.com/marializatulabing.patangan"><p>Maria Liza Tulabing Patangan</p></a></div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>Ma</span>ria <span>Li</span>za</h1>
+      </div>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="https://www.facebook.com/marializatulabing.patangan"><img src="fb.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.marializapatangan@gmail.com/"><img src="email.png.png" /></a>
+        </div>
+      </div>
+      <p>Copyright © 2024 Maria Liza T. Patangan. All rights reserved</p>
+    </div>
+  </section>
+  <script>
+    $(document).ready(function() {
+      $('ul.navbar-nav li').click(function() {
+          $('li').removeClass("active");
+          $(this).addClass("active");
+      });
+  });
+  
+  </script>
+  <script>
+    // Get all the list items
+    var navItems = document.querySelectorAll('.nav-list ul li a');
+  
+    // Loop through each item and add click event listener
+    navItems.forEach(function(navItem) {
+      navItem.addEventListener('click', function() {
+        // Remove active class from all items
+        navItems.forEach(function(item) {
+          item.classList.remove('active');
+        });
+        // Add active class to the clicked item
+        this.classList.add('active');
+      });
+    });
+    </script>
+  <!-- End Footer -->
+  <script src="./app.js"></script>
+</body>
+
+</html>
